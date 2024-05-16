@@ -4,22 +4,32 @@
     <lightning-layout-item size="12">
       <lightning-card title="Find a Boat">
         <!-- New Boat button goes here -->
+        <lightning-button
+          label="New Boat"
+          variant="brand-outline"
+          name="New Boat"
+          onclick={createNewBoat}
+          slot="actions"
+        ></lightning-button>
         <p class="slds-var-p-horizontal_small">
           <!-- boatSearchForm component goes here -->
-          <c-boat-search-form></c-boat-search-form>
+          <c-boat-search-form onsearch={searchBoats}></c-boat-search-form>
         </p>
       </lightning-card>
     </lightning-layout-item>
     <!-- Bottom -->
     <lightning-layout-item size="12" class="slds-p-top_small slds-is-relative">
       <!-- Spinner goes here -->
-      <lightning-spinner
-        lwc:if={isLoading}
-        alternative-text="Loading"
+      <template if:true={isLoading}>
+        <lightning-spinner
+          alternative-text="Loading"
+          variant="brand"
+        ></lightning-spinner>
+      </template>
+      <c-boat-search-results
         onloading={handleLoading}
         ondoneloading={handleDoneLoading}
-      ></lightning-spinner>
-      <c-boat-search-results lwc:else></c-boat-search-results>
+      ></c-boat-search-results>
       <!-- boatSearchResults goes here -->
       <!-- onloading={handleLoading} ondoneloading={handleDoneLoading} -->
     </lightning-layout-item>
