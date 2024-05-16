@@ -16,7 +16,7 @@ const BOAT_FIELDS = [LONGITUDE_FIELD, LATITUDE_FIELD];
 export default class BoatMap extends LightningElement {
   // private
   subscription = null;
-  @api boatId = "a02dM000000TBZGQA4";
+  @api boatId;
 
   // Getter and Setter to allow for logic to run on recordId change
   // this getter must be public

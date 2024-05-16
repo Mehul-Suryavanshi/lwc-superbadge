@@ -9,7 +9,7 @@ const ERROR_TITLE = "Error loading Boats Near Me";
 const ERROR_VARIANT = "error";
 
 export default class BoatsNearMe extends LightningElement {
-  @api boatTypeId = "a01dM000003nVkiQAE";
+  @api boatTypeId;
   mapMarkers = [];
   isLoading = true;
   isRendered;

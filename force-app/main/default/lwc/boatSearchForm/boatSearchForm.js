@@ -19,9 +19,9 @@ export default class BoatSearchForm extends LightningElement {
           return { label: item.Name, value: item.Id };
         })
       );
-      console.log("SEARCH OPTIONS :: " + JSON.stringify(this.searchOptions));
+      // console.log("SEARCH OPTIONS :: " + JSON.stringify(this.searchOptions));
     } else if (error) {
-      console.log("Errorr :: " + JSON.stringify(error));
+      // console.log("Errorr :: " + JSON.stringify(error));
     }
   }
 
