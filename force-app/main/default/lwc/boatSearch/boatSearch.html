@@ -13,7 +13,10 @@
         ></lightning-button>
         <p class="slds-var-p-horizontal_small">
           <!-- boatSearchForm component goes here -->
-          <c-boat-search-form onsearch={searchBoats}></c-boat-search-form>
+          <c-boat-search-form
+            onsearch={searchBoats}
+            slot="footer"
+          ></c-boat-search-form>
         </p>
       </lightning-card>
     </lightning-layout-item>

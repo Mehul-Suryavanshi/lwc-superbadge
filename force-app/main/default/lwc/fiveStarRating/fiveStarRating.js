@@ -1,3 +1,4 @@
+import { LightningElement } from "lwc";
 //import fivestar static resource, call it fivestar
 
 // add constants here
@@ -28,7 +29,7 @@ export default class FiveStarRating extends LightningElement {
   loadScript() {}
 
   initializeRating() {
-    let domEl = this.template.querySelector('ul');
+    let domEl = this.template.querySelector("ul");
     let maxRating = 5;
     let self = this;
     let callback = function (rating) {
