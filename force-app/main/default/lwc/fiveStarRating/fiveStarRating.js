@@ -5,7 +5,7 @@ import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import { loadStyle, loadScript } from "lightning/platformResourceLoader";
 
 // add constants here
-const SUCCESS_TITLE = "Success";
+
 const READ_ONLY_CLASS = "readonly c-rating";
 const EDITABLE_CLASS = "c-rating";
 const ERROR_TITLE = "Error loading five-star";
@@ -74,9 +74,11 @@ export default class FiveStarRating extends LightningElement {
   // Method to fire event called ratingchange with the following parameter:
   // {detail: { rating: CURRENT_RATING }}); when the user selects a rating
   ratingChanged(rating) {
-    const ratingchange = new CustomEvent("ratingchange", {
-      detail: { rating: rating }
+    const ratingchangeEvent = new CustomEvent("ratingchange", {
+      detail: {
+        rating: rating
+      }
     });
-    this.dispatchEvent(ratingchange);
+    this.dispatchEvent(ratingchangeEvent);
   }
 }
