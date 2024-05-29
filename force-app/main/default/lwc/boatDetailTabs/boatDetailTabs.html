@@ -9,7 +9,7 @@
   </template>
   <template if:true={wiredRecord.data}>
     <!-- lightning card for the content when wiredRecord has data goes here  -->
-    <lightning-tabset variant="scoped">
+    <lightning-tabset variant="scoped" active-tab-value="">
       <lightning-tab label={label.labelDetails}>
         <lightning-card title={boatName} icon-name={detailsTabIconName}>
           <lightning-button
